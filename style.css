@@ -342,7 +342,7 @@ button.btn-success:hover { background-color: #31905d; }
     #main-dashboard {
         flex-direction: column !important;
         height: auto !important;
-        mid-height: 100vh !important;
+        min-height: 100vh !important;
     }
 
     /* 2. Sesuaikan Sidebar kiri agar berubah menjadi menu atas yang rapi */
