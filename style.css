@@ -334,3 +334,66 @@ button.btn-success:hover { background-color: #31905d; }
     color: #2765a8;
     line-height: 1.4;
 }
+
+/* ==================== MEDIA QUERIES: RESPONSIVE MOBILE LAYOUT ==================== */
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ubah struktur dashboard utama dari flex samping (row) menjadi vertikal (column) */
+    #main-dashboard {
+        flex-direction: column !important;
+        height: auto !important;
+    }
+
+    /* 2. Sesuaikan Sidebar kiri agar berubah menjadi menu atas yang rapi */
+    .sidebar {
+        width: 100% !important;
+        height: auto !important;
+        padding: 15px !important;
+        box-sizing: border-box;
+        border-right: none !important;
+        border-bottom: 2px solid #e2e8f0;
+    }
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 10px !important;
+    }
+
+    /* Ubah tombol navigasi sidebar jadi berbaris horizontal di HP */
+    .sidebar .nav-btn {
+        display: inline-block !important;
+        width: auto !important;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
+    }
+
+    /* 3. Sesuaikan area konten utama agar mengambil ruang penuh */
+    .main-content {
+        width: 100% !important;
+        padding: 15px !important;
+        box-sizing: border-box;
+    }
+
+    /* 4. Rapikan form input dan judul agar tidak terpotong */
+    .page-header h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .card-form input, 
+    .card-form select, 
+    .card-form button {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 5. Trik Tabel Responsif: Biar tabel bisa digeser ke kanan-kiri dan tidak merusak layar HP */
+    div {
+        overflow-x: auto;
+    }
+    
+    table {
+        min-width: 500px; /* Memaksa tabel punya ruang minimal agar teksnya tidak berdesakan */
+    }
+}
